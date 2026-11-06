@@ -1,3 +1,4 @@
 export function applyDiscount(price: number, pct: number): number {
-  return price - (price * pct) / 100;
+  const capped = Math.min(pct, 50);
+  return price - (price * capped) / 100;
 }
